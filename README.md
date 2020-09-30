@@ -12,9 +12,9 @@ In addition to colors, we will define a set of numeric features for each week (e
 We assume that for each week, we know the opening price of the first trading day and the (adjusted) close price of the last trading day in a week. In the strategy based on labels, we will invest in the stock during "green" weeks and keep the money in cash during "red" weeks. There are no short positions (which refers to a trading technique in which an investor sells a security with plans to buy it later, or in this case, to sale a stock you do not own). We start with $100 prior to week 1. The strategy is summarized as follows:
 1. for the very first "green" week, we invest $100 by buying (possibly fractional number of) shares of the selected stock at the opening price of the first trading day of that week
 2. if the next week is "red" (we want to be out of market next week):
-⋅⋅⋅(a)if we have a position this week (i.e. this week is "green"), we sell our shares at the adjusted closing price of last trading day of this week
-⋅⋅⋅(b)if we have no position this week (i.e. this week is "red"), we do nothing and remain in cash for next week
+   (a)if we have a position this week (i.e. this week is "green"), we sell our shares at the adjusted closing price of last trading day of this week
+   (b)if we have no position this week (i.e. this week is "red"), we do nothing and remain in cash for next week
 3. if the next week is "green" (we want to be invested next week):
-⋅⋅*(a) if we have a position this week (i.e. this week is "green"), we do nothing and continue to be invested in the stock for next week
-⋅⋅*(b) if we have no position this week (i.e. this week is "red"), we buy (possibly fractional number of) shares of the stock at the opening price of next week - we ⋅⋅⋅invest all the money we have accumulated so far
+   (a) if we have a position this week (i.e. this week is "green"), we do nothing and continue to be invested in the stock for next week
+   (b) if we have no position this week (i.e. this week is "red"), we buy (possibly fractional number of) shares of the stock at the opening price of next week - we invest all the money we have accumulated so far
 4. ignore trading costs and assume that we are able to buy or sell at open or adjusted closing prices
